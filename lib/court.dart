@@ -6,10 +6,6 @@ class Court {
 
   Court(this.height, this.width);
 
-  bool isPointWithinTopHalf(double y) => y < height / 2;
-
-  bool isPointWithinBottomHalf(double y) => y > height / 2 && y < height;
-
   double getCenteredObjectXOffset([double objWidth = 0]) =>
       (width - objWidth) / 2;
 
