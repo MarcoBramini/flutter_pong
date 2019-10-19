@@ -5,6 +5,8 @@ class Player {
   Offset _offset;
   double _lastXOffset;
 
+  double cursorXVelocity = 0.0;
+
   Player() {
     _offset = Offset(0.0, 0.0);
   }

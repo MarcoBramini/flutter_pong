@@ -1,20 +1,25 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_pong/pong.dart';
 
+class Velocity {
+  double vx;
+  double vy;
+
+  Velocity(this.vx, this.vy);
+}
+
 class Ball {
   Offset _offset;
+  Velocity _velocity;
 
-  // Ball speed px/s
-  double ballSpeedX = 30.0;
-  double ballSpeedY = 30.0;
-
-  Ball() {
-    _offset = Offset(0.0, 0.0);
+  Ball(double dx, double dy, double vx, double vy) {
+    _offset = Offset(dx, dy);
+    _velocity = Velocity(vx, vy);
   }
 
   Offset get offset => _offset;
+
+  Velocity get velocity => _velocity;
 
   setBallPosition(double dx, double dy) => _offset = Offset(dx, dy);
 
